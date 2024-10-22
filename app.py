@@ -25,6 +25,10 @@ def get_posts():
 def health_check():
     return 'Service is up and running!', 200  # Liveness probe
 
+@app.route('/dummy-test')
+def health_check():
+    return 'Kudos, bro !', 200  # Liveness probe
+
 @app.route('/ready')
 def readiness_check():
     # You can add more complex checks here if necessary
